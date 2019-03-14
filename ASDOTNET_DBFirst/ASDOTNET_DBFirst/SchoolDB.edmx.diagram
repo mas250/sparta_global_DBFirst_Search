@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="60ae4394d13b4d129b46cb5b8d8d5f1d" Name="Diagram1">
+        <EntityTypeShape EntityType="MatSchoolDBModel.Book" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatSchoolDBModel.Classroom" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatSchoolDBModel.Stationary" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatSchoolDBModel.Student" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MatSchoolDBModel.Subject" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MatSchoolDBModel.Table" Width="1.5" PointX="5.375" PointY="3.75" />
+        <EntityTypeShape EntityType="MatSchoolDBModel.Laptop" Width="1.5" PointX="8.75" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

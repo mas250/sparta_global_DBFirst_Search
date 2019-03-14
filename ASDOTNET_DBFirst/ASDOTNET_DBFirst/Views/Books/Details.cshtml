@@ -1,0 +1,50 @@
+﻿@model ASDOTNET_DBFirst.Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.bookName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.bookName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.author)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.author)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.publisher)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publisher)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISBN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISBN)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BookID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

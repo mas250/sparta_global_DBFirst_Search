@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MatSchoolDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="BookID" />
+    </Key>
+    <Property Name="bookName" Type="varchar" MaxLength="250" />
+    <Property Name="author" Type="varchar" MaxLength="250" />
+    <Property Name="publisher" Type="varchar" MaxLength="250" />
+    <Property Name="ISBN" Type="varchar" MaxLength="255" />
+    <Property Name="BookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Classroom">
+    <Key>
+      <PropertyRef Name="ClassroomID" />
+    </Key>
+    <Property Name="className" Type="varchar" MaxLength="250" />
+    <Property Name="capcity" Type="int" />
+    <Property Name="classLocation" Type="varchar" MaxLength="255" />
+    <Property Name="ClassroomID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Laptop">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="color" Type="nvarchar" MaxLength="250" />
+    <Property Name="make" Type="nvarchar" MaxLength="250" />
+    <Property Name="purchaseDate" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="Stationary">
+    <Key>
+      <PropertyRef Name="StationaryID" />
+    </Key>
+    <Property Name="stationaryName" Type="varchar" MaxLength="250" />
+    <Property Name="price" Type="int" />
+    <Property Name="supplier" Type="varchar" MaxLength="255" />
+    <Property Name="StationaryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="firstName" Type="varchar" MaxLength="250" />
+    <Property Name="lastName" Type="varchar" MaxLength="250" />
+    <Property Name="age" Type="int" />
+    <Property Name="gender" Type="varchar" MaxLength="255" />
+    <Property Name="StudentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="topic" Type="nvarchar" MaxLength="250" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="duration" Type="int" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="topic" Type="nvarchar" MaxLength="250" />
+    <Property Name="startDate" Type="datetime" />
+    <Property Name="duration" Type="int" />
+  </EntityType>
+  <EntityContainer Name="MatSchoolDBModelStoreContainer">
+    <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Classroom" EntityType="Self.Classroom" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Laptop" EntityType="Self.Laptop" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stationary" EntityType="Self.Stationary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subject" EntityType="Self.Subject" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

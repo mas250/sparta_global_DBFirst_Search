@@ -1,0 +1,42 @@
+﻿@model ASDOTNET_DBFirst.Classroom
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Classroom</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.className)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.className)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.capcity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.capcity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.classLocation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.classLocation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ClassroomID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

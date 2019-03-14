@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MatSchoolDBModelStoreContainer" CdmEntityContainer="MatSchoolDBEntities1">
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="MatSchoolDBModel.Book">
+        <MappingFragment StoreEntitySet="Book">
+          <ScalarProperty Name="bookName" ColumnName="bookName" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="publisher" ColumnName="publisher" />
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="BookID" ColumnName="BookID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classrooms">
+      <EntityTypeMapping TypeName="MatSchoolDBModel.Classroom">
+        <MappingFragment StoreEntitySet="Classroom">
+          <ScalarProperty Name="className" ColumnName="className" />
+          <ScalarProperty Name="capcity" ColumnName="capcity" />
+          <ScalarProperty Name="classLocation" ColumnName="classLocation" />
+          <ScalarProperty Name="ClassroomID" ColumnName="ClassroomID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stationaries">
+      <EntityTypeMapping TypeName="MatSchoolDBModel.Stationary">
+        <MappingFragment StoreEntitySet="Stationary">
+          <ScalarProperty Name="stationaryName" ColumnName="stationaryName" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="supplier" ColumnName="supplier" />
+          <ScalarProperty Name="StationaryID" ColumnName="StationaryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="MatSchoolDBModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="age" ColumnName="age" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subjects">
+      <EntityTypeMapping TypeName="MatSchoolDBModel.Subject">
+        <MappingFragment StoreEntitySet="Subject">
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="topic" ColumnName="topic" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tables">
+      <EntityTypeMapping TypeName="MatSchoolDBModel.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="startDate" ColumnName="startDate" />
+          <ScalarProperty Name="topic" ColumnName="topic" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Laptops">
+      <EntityTypeMapping TypeName="MatSchoolDBModel.Laptop">
+        <MappingFragment StoreEntitySet="Laptop">
+          <ScalarProperty Name="purchaseDate" ColumnName="purchaseDate" />
+          <ScalarProperty Name="make" ColumnName="make" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

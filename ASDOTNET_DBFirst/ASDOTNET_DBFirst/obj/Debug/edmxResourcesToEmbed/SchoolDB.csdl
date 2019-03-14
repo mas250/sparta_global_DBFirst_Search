@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MatSchoolDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="BookID" />
+    </Key>
+    <Property Name="bookName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="author" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="publisher" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ISBN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Classroom">
+    <Key>
+      <PropertyRef Name="ClassroomID" />
+    </Key>
+    <Property Name="className" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="capcity" Type="Int32" />
+    <Property Name="classLocation" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ClassroomID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Stationary">
+    <Key>
+      <PropertyRef Name="StationaryID" />
+    </Key>
+    <Property Name="stationaryName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="supplier" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StationaryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="firstName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="lastName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="age" Type="Int32" />
+    <Property Name="gender" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="StudentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityContainer Name="MatSchoolDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Books" EntityType="Self.Book" />
+    <EntitySet Name="Classrooms" EntityType="Self.Classroom" />
+    <EntitySet Name="Stationaries" EntityType="Self.Stationary" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="Subjects" EntityType="MatSchoolDBModel.Subject" />
+    <EntitySet Name="Tables" EntityType="MatSchoolDBModel.Table" />
+    <EntitySet Name="Laptops" EntityType="MatSchoolDBModel.Laptop" />
+  </EntityContainer>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="topic" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="duration" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="topic" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="startDate" Type="DateTime" Precision="3" />
+    <Property Name="duration" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Laptop">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="color" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="make" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="purchaseDate" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>
