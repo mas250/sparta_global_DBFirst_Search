@@ -20,10 +20,30 @@ namespace ASDOTNET_DBFirst.Controllers
             return View(db.Students.ToList());
         }
 
-        // GET:  search Students
+        //GET Search Students
+        [HttpGet]
         public ActionResult Search()
         {
+            
             return View("Search");
+        }
+        // POST: Students/Search/1
+        [HttpPost]
+        public ActionResult Search(int? id)
+        {
+            if (id == null)
+            {
+                return View("Error");
+                //new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Student student = db.Students.Find(id);
+            //Student student = db.Students.SingleOrDefault(s => s.firstName == firstName)
+            if (student == null)
+            {
+                return View("Error");
+                //HttpNotFound();
+            }
+            return View("Details", student);
         }
 
         // GET: Students/Details/5/Mat
@@ -78,6 +98,7 @@ namespace ASDOTNET_DBFirst.Controllers
             }
             return View(student);
         }
+
 
         // POST: Students/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 

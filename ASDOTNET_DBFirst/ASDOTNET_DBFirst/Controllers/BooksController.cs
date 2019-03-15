@@ -34,7 +34,43 @@ namespace ASDOTNET_DBFirst.Controllers
             }
             return View(book);
         }
+        //GET Search Book
+        public ActionResult Search()
+        {
+            return View("Search");
+        }
+        // POST: Book/Search/1
+        [HttpPost]
+        public ActionResult Search(int? id)
+        {
+            if (id == null)
+            {
+                return View("Error");
+                //new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Book book = db.Books.Find(id);
+            if (book == null)
+            {
+                return View("Error");
+                //HttpNotFound();
+            }
+            return View("Details", book);
+        }
 
+        //// GET: Students/Details/5/Mat
+        //public ActionResult Details(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return View("Error");//return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    Student student = db.Students.Find(id);
+        //    if (student == null)
+        //    {
+        //        return View("Error"); //return HttpNotFound();
+        //    }
+        //    return View(student);
+        //}
         // GET: Books/Create
         public ActionResult Create()
         {

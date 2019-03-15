@@ -1,4 +1,4 @@
-﻿@model ASDOTNET_DBFirst.Student
+﻿@model ASDOTNET_DBFirst.Book
 
 @{
     ViewBag.Title = "Search";
@@ -17,7 +17,7 @@
        
 
         <div class="form-group">
-            @Html.Label("Search", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.publisher, htmlAttributes: new { @class = "control-label col-md-2" })
             <input type="text" name="id" value="" />
         </div>
 

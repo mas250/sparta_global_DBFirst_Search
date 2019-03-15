@@ -20,20 +20,43 @@ namespace ASDOTNET_DBFirst.Controllers
             return View(db.Classrooms.ToList());
         }
 
-        // GET: Classrooms/Details/5
+        // GET: classrooms/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Classroom classroom = db.Classrooms.Find(id);
-            if (classroom == null)
+            Book book = db.Books.Find(id);
+            if (book == null)
             {
                 return HttpNotFound();
             }
-            return View(classroom);
+            return View(book);
         }
+        //GET Search classroom
+        public ActionResult Search()
+        {
+            return View("Search");
+        }
+        // POST: classroom/Search/1
+        [HttpPost]
+        public ActionResult Search(int? id)
+        {
+            if (id == null)
+            {
+                return View("Error");
+                //new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Classroom classroom = db.Classrooms.Find(id);
+            if (classroom == null)
+            {
+                return View("Error");
+                //HttpNotFound();
+            }
+            return View("Details", classroom);
+        }
+        
 
         // GET: Classrooms/Create
         public ActionResult Create()

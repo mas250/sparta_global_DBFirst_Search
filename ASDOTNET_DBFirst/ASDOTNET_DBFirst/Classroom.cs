@@ -11,11 +11,15 @@ namespace ASDOTNET_DBFirst
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Classroom
     {
+        [StringLength(50)]
         public string className { get; set; }
+        [Range(5,500)]
         public Nullable<int> capcity { get; set; }
+        [StringLength(50)]
         public string classLocation { get; set; }
         public int ClassroomID { get; set; }
     }

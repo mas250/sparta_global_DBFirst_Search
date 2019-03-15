@@ -269,6 +269,9 @@
     <Content Include="Views\Laptops\Index.cshtml" />
     <Content Include="Views\Students\Error.cshtml" />
     <Content Include="Views\Students\Search.cshtml" />
+    <Content Include="Views\Books\Search.cshtml" />
+    <Content Include="Views\Classrooms\Search.cshtml" />
+    <Content Include="Views\Laptops\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

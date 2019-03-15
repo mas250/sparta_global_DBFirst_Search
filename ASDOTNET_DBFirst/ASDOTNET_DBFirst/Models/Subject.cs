@@ -12,6 +12,7 @@ namespace ASDOTNET_DBFirst.Models
         private DateTime startDate;
         private int duration;
 
+        
         public int Id { get => id; set => id = value; }
         public string Topic { get => topic; set => topic = value; }
         public DateTime StartDate { get => startDate; set => startDate = value; }
